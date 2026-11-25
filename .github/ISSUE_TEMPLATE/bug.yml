@@ -1,0 +1,62 @@
+name: "🐞 Bug"
+description: "Iets werkt niet zoals verwacht."
+title: "[Bug] "
+labels: ["bug"]
+# Zet hier je eigen project-bord, dan komt elk issue er automatisch op:
+# projects: ["GEBRUIKERSNAAM/PROJECTNUMMER"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🐞 **Een goede bugbeschrijving is het halve werk.** Plak ze straks gewoon in je prompt voor de AI.
+
+  - type: textarea
+    id: wat
+    attributes:
+      label: "Wat gebeurt er?"
+      description: "Beschrijf wat je ziet. Plak de foutmelding letterlijk, of voeg een screenshot toe."
+    validations:
+      required: true
+
+  - type: textarea
+    id: verwacht
+    attributes:
+      label: "Wat had je verwacht?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: stappen
+    attributes:
+      label: "Hoe kan iemand anders dit nadoen?"
+      placeholder: |
+        1. Open index.php
+        2. ...
+        3. Zie de fout
+    validations:
+      required: true
+
+  - type: textarea
+    id: vermoeden
+    attributes:
+      label: "🕵️ Wat denk je zelf dat de oorzaak is?"
+      description: "Gok eerst zelf, vóór je de AI vraagt. Achteraf vergelijk je in je reflectie of je gelijk had."
+    validations:
+      required: true
+
+  - type: textarea
+    id: geprobeerd
+    attributes:
+      label: "Wat heb je al geprobeerd?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: afspraken
+    attributes:
+      label: "🤝 Afspraken"
+      options:
+        - label: "Dit issue staat op mijn project-bord."
+          required: true
+        - label: "Ik sluit dit issue met een commit die `Fixes #nummer` én mijn eigen reflectie bevat."
+          required: true

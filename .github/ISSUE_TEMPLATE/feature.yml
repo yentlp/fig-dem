@@ -1,0 +1,82 @@
+name: "🧩 Nieuwe taak / feature"
+description: "Iets nieuws bouwen. Vul dit volledig in VOOR je begint te coderen."
+title: "[Taak] "
+labels: ["taak"]
+# Zet hier je eigen project-bord, dan komt elk issue er automatisch op:
+# projects: ["GEBRUIKERSNAAM/PROJECTNUMMER"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        👋 **Lees dit eerst.** Dit issue is je plan én de basis voor je prompt aan de AI.
+        Hoe duidelijker je hier bent, hoe beter de AI je kan helpen. Je mag fouten maken in je plan — dat is net de bedoeling.
+
+  - type: textarea
+    id: doel
+    attributes:
+      label: "🎯 Wat wil ik bereiken?"
+      description: "Beschrijf in 1 à 3 zinnen wat er werkt als je klaar bent. Schrijf het voor iemand die je code niet kent."
+      placeholder: "Ik wil een Line-klasse zodat ik een lijn tussen twee punten op het canvas kan tekenen."
+    validations:
+      required: true
+
+  - type: textarea
+    id: oop
+    attributes:
+      label: "🧠 Welke OOP-concepten komen hierbij kijken?"
+      description: "Denk zelf na vóór je de AI iets vraagt. Welke klassen bestaan al? Erf je ergens van? Heb je een trait of interface nodig? Gokken mag."
+      placeholder: "Line erft van Shape. Misschien heeft hij ook de trait HasRotation nodig?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bestanden
+    attributes:
+      label: "📂 Welke bestanden ga ik waarschijnlijk maken of aanpassen?"
+      placeholder: |
+        - classes/Line.php (nieuw)
+        - index.php
+    validations:
+      required: true
+
+  - type: textarea
+    id: criteria
+    attributes:
+      label: "✅ Wanneer is het klaar?"
+      description: "Maak een checklist. Elke regel moet je kunnen controleren door te kijken of te klikken in de browser."
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: "🤖 Mijn eerste prompt voor de AI"
+      description: "Schrijf de prompt die je gaat gebruiken. Tips: noem het issuenummer, de bestanden, en zeg wat de AI NIET mag doen."
+      placeholder: "Werk aan issue #4. Maak classes/Line.php die erft van Shape. Pas enkel index.php aan om een lijn te tonen. Leg uit wat je doet, en verander geen andere klassen."
+    validations:
+      required: true
+
+  - type: textarea
+    id: onzeker
+    attributes:
+      label: "❓ Wat weet ik nog niet?"
+      description: "Er is altijd iets. Noteer het: dit wordt later waarschijnlijk je leerpunt."
+      placeholder: "Ik weet niet hoe ik in SVG een lijn teken."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: afspraken
+    attributes:
+      label: "🤝 Afspraken"
+      options:
+        - label: "Dit issue staat op mijn project-bord. Ik zet het op 'In progress' zodra ik begin."
+          required: true
+        - label: "Elke commit voor dit issue bevat `Refs #nummer`."
+          required: true
+        - label: "Ik sluit dit issue met een commit die `Fixes #nummer` én mijn eigen reflectie bevat."
+          required: true
